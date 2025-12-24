@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Answering System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Logic Answering System</h1>
+            <p class="subtitle">Approaching truth through iterative reasoning and verification</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-container">
+                    <textarea id="question-input" placeholder="Enter your question..." rows="3"></textarea>
+                    <div class="input-controls">
+                        <button id="record-btn" class="btn btn-secondary" title="Record audio">
+                            <span class="icon">🎤</span>
+                        </button>
+                        <button id="submit-btn" class="btn btn-primary">
+                            <span>Submit Question</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="audio-status" class="audio-status hidden"></div>
+            </section>
+
+            <!-- Status Bar -->
+            <section id="status-bar" class="status-bar hidden">
+                <div class="status-indicator">
+                    <div class="spinner"></div>
+                    <span id="status-text">Initializing...</span>
+                </div>
+                <div id="cost-display" class="cost-display">
+                    <span>Cost: $0.0000</span>
+                </div>
+            </section>
+
+            <!-- Tree View Section -->
+            <section id="tree-section" class="tree-section hidden">
+                <div class="tree-header">
+                    <h2>Reasoning Process</h2>
+                    <div class="tree-controls">
+                        <button id="expand-all" class="btn btn-small">Expand All</button>
+                        <button id="collapse-all" class="btn btn-small">Collapse All</button>
+                    </div>
+                </div>
+                <div id="tree-container" class="tree-container"></div>
+            </section>
+
+            <!-- Answer Section -->
+            <section id="answer-section" class="answer-section hidden">
+                <h2>Answer</h2>
+                <div id="answer-content" class="answer-content"></div>
+                <div id="feedback-section" class="feedback-section hidden">
+                    <textarea id="feedback-input" placeholder="Provide feedback or ask follow-up..." rows="2"></textarea>
+                    <button id="feedback-btn" class="btn btn-primary">Continue with Feedback</button>
+                </div>
+            </section>
+
+            <!-- User Query Modal -->
+            <div id="query-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h3 id="query-title">Clarification Needed</h3>
+                    <p id="query-text"></p>
+                    <textarea id="query-response" rows="3" placeholder="Your response..."></textarea>
+                    <button id="query-submit" class="btn btn-primary">Submit Response</button>
+                </div>
+            </div>
+
+            <!-- Cost Summary Section -->
+            <section id="cost-section" class="cost-section hidden">
+                <h2>Cost Summary</h2>
+                <div id="cost-details" class="cost-details"></div>
+                <div id="warnings" class="warnings"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with Claude Opus 4.5 and Gemini 3 Flash</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

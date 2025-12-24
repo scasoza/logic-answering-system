@@ -1,0 +1,21 @@
+# Core dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# LLM SDKs
+anthropic>=0.39.0
+google-genai>=1.0.0
+
+# Audio processing
+openai-whisper>=20231117
+soundfile>=0.12.1
+
+# Utilities
+pydantic>=2.5.0
+python-dotenv>=1.0.0
+httpx>=0.25.0
+aiofiles>=23.2.0
+
+# NLP for sentence parsing
+spacy>=3.7.0
