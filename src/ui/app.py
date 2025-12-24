@@ -220,6 +220,12 @@ async def transcribe_audio(audio: UploadFile = File(...)):
     """Transcribe audio to text using Whisper."""
     try:
         import whisper
+    except ImportError:
+        return {
+            "error": "Whisper not installed. Install with: pip install -r requirements-audio.txt"
+        }
+
+    try:
         import tempfile
 
         # Save uploaded file temporarily

@@ -62,11 +62,11 @@ cd logic-answering-system
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Install core dependencies
 pip install -r requirements.txt
 
-# Download spaCy model (optional, for NLP)
-python -m spacy download en_core_web_sm
+# Optional: Install audio transcription (requires ~1GB+ disk space)
+pip install -r requirements-audio.txt
 
 # Copy environment file and add API keys
 cp .env.example .env
@@ -126,7 +126,7 @@ Logs are saved as JSON in the `logs/` directory.
 - **Collapsible tree view** of the entire reasoning process
 - **Color coding**: Green (TRUE), Red (FALSE), Yellow (UNDEFINED)
 - **Real-time updates** via WebSocket
-- **Audio input** with Whisper transcription
+- **Audio input** with Whisper transcription (optional, requires separate install)
 - **Diff view** for disambiguation iterations
 - **Cost tracking** with warnings for expensive patterns
 

@@ -1,0 +1,4 @@
+# Optional: Audio processing (requires ~1GB+ disk space)
+# Install with: pip install -r requirements-audio.txt
+openai-whisper>=20231117
+soundfile>=0.12.1
